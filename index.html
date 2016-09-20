@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript exercises</title>
+</head>
+<body>
+		
+<p>Body Mass Index (BMI) is a measure of healthy weight.
+It can be calculated by taking your weight in kilograms and dividing by the square of your height in meters. 
+
+Write a program that prompts the user to enter a weight in pounds and a height in feet and inches and displays the users BMI value. 
+
+To convert the users weight in pounds to their weight in kilograms you will need to use the fact that there are 2.2 pounds in one kilogram. 
+</p>
+
+<!-- -Equation for BMI : (weight in kg)/((height in meters)^2)
+
+- equation to convert pounds to kg : (pounds/2.2) = kg
+
+- equation to convert inches to meters : (inches*0.0254) = meters -->
+
+
+<script>
+	var weight = prompt("In pounds, how much do you weigh?");
+	weight = parseFloat(weight);
+	weight = (weight / 2.2);
+
+	// output is weight in kg
+
+	var height = prompt("In inches, how tall are you? (For reference: 1 foot = 12 inches; 5 feet = 60 inches");
+		height = parseFloat(height);
+		height = (height * 0.0254);
+
+	// output is height in meters*
+
+	var bmi = (weight/(height * height));
+
+	console.log("your BMI is " + bmi);
+
+</script> 
+
+
+2.
+The temperature T in degrees Celsius (°C) is equal to the temperature T in degrees Fahrenheit (°F) minus 32, times 5/9.
+
+<!--> Tc = (Tf-32) * (1.8)-->
+
+Write a program which asks the user the temperature in celsius and displays it in Fahrenheit.
+
+<script>
+	
+	var tempC = prompt("What is the temperature in celsius?");
+		tempC = parseFloat(tempC);
+
+	var tempF = ((tempC * 1.8) + 32);
+
+	console.log("it is " + tempF +" degrees Fahrenheit");
+
+</script>
+
+<p>3.
+Create a program which prompts the user to enter five test scores. Then, output the average of the five test scores.</p>
+
+<script>
+	
+var score1 = prompt("Enter one test score");
+	score1 = parseFloat(score1);
+
+var score2 = prompt("Enter another test score");
+	score2 = parseFloat(score2);
+
+var score3 = prompt("Enter another test score");
+	score3 = parseFloat(score3);
+
+var score4 = prompt("Enter another test score");
+	score4 = parseFloat(score4);
+
+var score5 = prompt("Enter one last test score");
+	score5 = parseFloat(score5);
+
+var average = ((score1 + score2 + score3 + score4 + score5)/5);
+
+console.log("Your test average is " + average);
+
+</script>
+
+</body>
+</html>
